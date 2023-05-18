@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/',
-                element: <Navigate to='/'></Navigate>
+                element: <Navigate to='/category/0'></Navigate>
             },
             {
                 path: 'login',
