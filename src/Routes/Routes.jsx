@@ -30,6 +30,11 @@ const router = createBrowserRouter([
                 element: <Navigate to='/category/0'></Navigate>
             },
             {
+                path: 'toysDetails/:id',
+                element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+            },
+            {
                 path: 'login',
                 element: <Login></Login>
             },
@@ -59,11 +64,7 @@ const router = createBrowserRouter([
 
         ]
     },
-    {
-        path: 'toysDetails/:id',
-        element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
-    },
+    
 
 ]);
 

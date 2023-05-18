@@ -7,7 +7,6 @@ const ToyDetail = () => {
     console.log(singleToy);
     const { _id, sellerName, name, subCategory, quantity, price, url, rating, sellerEmail, detail } = singleToy
 
-    // picture, toy name, seller name, seller email, price, rating, available quantity, and detail description
     return (
         <>
          <h1 className='text-5xl font-bold text-center'>Single Toy</h1>

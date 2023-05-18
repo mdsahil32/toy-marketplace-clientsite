@@ -8,7 +8,7 @@ const ToysDetails = () => {
     const {id, name , number, picture, price, rating} = data;
     return (
         <>
-            <Header></Header>
+            {/* <Header></Header> */}
 
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -23,7 +23,7 @@ const ToysDetails = () => {
                 </div>
             </div>
 
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     );
 };
