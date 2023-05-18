@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 
@@ -18,7 +18,7 @@ const ToysDetails = () => {
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <p>Price: {price}</p>
                         <p>Rating: {rating}</p>
-                        <button className="btn btn-primary">Get Started</button>
+                       <Link to='/'> <button  className="btn mt-4">To Back</button></Link>
                     </div>
                 </div>
             </div>

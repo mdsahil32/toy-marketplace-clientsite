@@ -30,12 +30,13 @@ const Category = () => {
 
     return (
         <div className='mx-24 my-24'>
-            <h1>ACTION HERO TOYS</h1>
+            <h1 className='text-6xl font-semibold text-center '>ACTION HERO TOYS</h1>
             <Tabs>
                 <TabList>
-                    <Tab>Title 1</Tab>
-                    <Tab>Title 2</Tab>
-                    <Tab>Title 3</Tab>
+                    <p className='underline mb-2'>Sub-Category list Check it.</p>
+                    <Tab>Avengers</Tab>
+                    <Tab>DC</Tab>
+                    <Tab>Star Wars</Tab>
                 </TabList>
 
                 <TabPanel>
