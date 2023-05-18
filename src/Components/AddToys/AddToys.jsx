@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 const AddToys = () => {
     const handleSubmit = e =>{
@@ -13,7 +14,25 @@ const AddToys = () => {
         const quantity = form.quantity.value;
         const detail = form.detail.value;
         const AddToy = {url, name, sellerEmail, sellerName, subCategory, price, rating, quantity, detail}
-        console.log(AddToy);
+        // console.log(AddToy);
+        fetch('http://localhost:5000/addToy',{
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(AddToy)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if (data.insertedId) {
+                Swal.fire(
+                    'Good job!',
+                    'Add Toy Successfully',
+                    'success'
+                  )
+            }
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
