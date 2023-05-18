@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllToysTable = ({ toy }) => {
     console.log(toy);
@@ -13,6 +14,9 @@ const AllToysTable = ({ toy }) => {
             <td>{quantity}</td>
             <td>{price}</td>
             <td>{sellerName}</td>
+            <td>
+            <Link className='hover:border-2 border-blue-500 p-2 rounded-lg' to={`/singleToyDetail/${_id}`}>View Detail</Link>
+            </td>
         </tr>
         
        

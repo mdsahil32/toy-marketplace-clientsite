@@ -7,7 +7,7 @@ const AllToys = () => {
     console.log(toys);
     return (
         <div>
-            <h1>this is all toysss</h1>
+            <h1 className='text-3xl font-semibold text-center my-3'>All Toys Are Here!!</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head*/}
@@ -19,6 +19,7 @@ const AllToys = () => {
                             <th>quantity</th>
                             <th>price</th>
                             <th>seller Name</th>
+                            <th></th>
                         </tr>
                     </thead>
                     {
