@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import googleImg from '../assets/google.png'
 
 const Login = () => {
+    const navigate = useNavigate()
     const { signIn, signInWithGoogle } = useContext(AuthContext)
+    const location = useLocation()
+    const from = location.state?.from?.pathname ||  '/'
     const handleLogin = e => {
         e.preventDefault()
         const form = event.target;
@@ -18,6 +21,7 @@ const Login = () => {
         .then(result =>{
             const logged = result.user;
             console.log(logged);
+            navigate(from, {replace: true})
         })
         .catch(error => {
             console.log(error);
@@ -28,6 +32,7 @@ const Login = () => {
         .then(result =>{
             const logged = result.user;
             console.log(logged);
+            navigate(from, {replace: true})
         })
         .catch(error => {
             console.log(error);

@@ -26,12 +26,10 @@ const Header = () => {
                                 <NavLink className='font-medium' to='/'>Home</NavLink>
                                 <NavLink className='font-medium' >All Toys</NavLink>
                                 <NavLink className='font-medium' >Blog</NavLink>
+                                <NavLink className='font-medium' >Add Toys</NavLink>
+                            <NavLink className='font-medium' >My Toys</NavLink>
                                 {user ? <>
-                                    <Link className='ml-4 font-medium'>My Toys</Link>
-                                    <Link className='ml-4 font-medium'>Add Toys</Link>
                                     <button className='ml-4 font-medium' onClick={handleLogout}>Logout</button>
-
-
                                 </>
                                     : <Link className='ml-4 font-medium' to='/login'>Login</Link>
                                 }
@@ -48,19 +46,17 @@ const Header = () => {
                     <div className=" navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-5">
                             <NavLink className='font-medium' to='/'>Home</NavLink>
-                            <NavLink className='font-medium' >All Toys</NavLink>
-                            <NavLink className='font-medium' >Blog</NavLink>
+                            <NavLink to='allToys' className='font-medium' >All Toys</NavLink>
+                            <NavLink to='/blog' className='font-medium' >Blog</NavLink>
+                            <NavLink to='/addToys' className='font-medium' >Add Toys</NavLink>
+                            <NavLink to='/myToys' className='font-medium' >My Toys</NavLink>
+                           
                             {user ? <>
-                                <Link className='ml-4 font-medium'>My Toys</Link>
-                                <Link className='ml-4 font-medium'>Add Toys</Link>
                                 <button className='ml-4 font-medium' onClick={handleLogout}>Logout</button>
-
-
                             </>
                                 : <Link className='ml-4 font-medium' to='/login'>Login</Link>
                             }
                         </ul>
-
                     </div>
 
                     <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
