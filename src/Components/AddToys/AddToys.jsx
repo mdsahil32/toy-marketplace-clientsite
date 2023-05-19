@@ -1,6 +1,8 @@
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useContext } from "react";
+import Footer from "../../Shared/Footer/Footer";
+import Header from "../../Shared/Header/Header";
 
 const AddToys = () => {
     const {user } = useContext(AuthContext)
@@ -39,6 +41,9 @@ const AddToys = () => {
         })
     }
     return (
+        <>
+        <Header></Header>
+
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                 <div className="text-center ">
@@ -109,6 +114,10 @@ const AddToys = () => {
                 </form>
             </div>
         </div>
+
+
+        <Footer></Footer>
+        </>
     );
 };
 

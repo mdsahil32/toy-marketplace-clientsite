@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyToysTable = ({ toy , toys, setToys}) => {
-    // const [toys, setToys] = useState(toy)
+
     // console.log(toys);
     const { _id, sellerName, name, subCategory, quantity, price, } = toy
 
@@ -54,8 +54,10 @@ const MyToysTable = ({ toy , toys, setToys}) => {
                 <td>
                     <Link className='hover:border-2 border-blue-500 p-2 rounded-lg' to={`/singleToyDetail/${_id}`}>View Detail</Link>
                 </td>
-                <td>Update</td>
-                <td className='btn p-2 text-black  bg-slate-400' onClick={()=>handleDelete(_id)} >delete</td>
+                <td>
+                    <Link className='hover:border-2 border-gray-600 p-2 rounded-md' to={`/updateToy/${_id}`}>Update</Link>
+                </td>
+                <td className='btn p-1 text-black  bg-slate-100' onClick={()=>handleDelete(_id)} >delete</td>
             </tr>
 
 

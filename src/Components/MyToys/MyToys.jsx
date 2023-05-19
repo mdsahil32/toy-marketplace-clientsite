@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import MyToysTable from "./MyToysTable";
+import Footer from "../../Shared/Footer/Footer";
+import Header from "../../Shared/Header/Header";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext)
@@ -16,14 +18,13 @@ const MyToys = () => {
         })
     } ,[])
     return (
+        <>
+        <Header></Header>
         <div>
         <h1 className='text-3xl font-semibold text-center my-3'>My Toys Are Here!!</h1>
-        {/* <div className='text-center my-4'>
-            <input onChange={(e) => setSearchText(e.target.value)} type="text" className='border-2 border-black h-10 rounded mr-1 ps-2 pl' placeholder='toy name' />
-            <button onClick={handleSearch} className='bg-blue-800 hover:bg-blue-950 text-white p-2 rounded-md'>Search</button>
-        </div> */}
-        <div className="overflow-x-auto">
-            <table className="table w-full">
+      
+        <div className="overflow-x-auto ">
+            <table className="table w-full ">
                 {/* head*/}
                 <thead>
                     <tr>
@@ -33,8 +34,8 @@ const MyToys = () => {
                         <th>quantity</th>
                         <th>price</th>
                         <th>seller Name</th>
-                        <th></th>
-                        <th></th>
+                        <th>See Details</th>
+                        <th>Update Data</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -50,6 +51,9 @@ const MyToys = () => {
         </div>
 
     </div>
+
+    <Footer></Footer>
+    </>
     );
 };
 

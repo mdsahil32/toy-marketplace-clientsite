@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const Avengers = ({ avenger }) => {
     const { user } = useContext(AuthContext)
 
-    console.log(avenger);
+    // console.log(avenger);
     const {id, name , number, picture, price, rating} = avenger;
 
     const handleView =()=>{

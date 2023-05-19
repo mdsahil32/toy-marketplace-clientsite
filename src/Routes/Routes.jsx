@@ -13,6 +13,7 @@ import ToysDetails from "../CardComponents/ToysDetails";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import AllToys from "../AllToys/AllToys";
 import ToyDetail from "../AllToys/ToyDetail";
+import UpdateToy from "../Components/MyToys/UpateToyWithModal/UpdateToy";
 
 const router = createBrowserRouter([
     {
@@ -52,20 +53,22 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><ToyDetail></ToyDetail></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/addToy/${params.id}`)
             },
-            {
-                path: 'addToys',
-                element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
-            },
-
-            {
-                path: 'myToys',
-                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
-            },
-
+            
         ]
     },
-    
-
+    {
+        path: 'addToys',
+        element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
+    },
+    {
+        path: 'myToys',
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+    },
+    {
+        path: 'updateToy/:id',
+        element: <UpdateToy></UpdateToy>,
+        loader: ({ params }) => fetch(`http://localhost:5000/addToy/${params.id}`)
+    }
 ]);
 
 export default router; 
