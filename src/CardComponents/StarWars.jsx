@@ -28,7 +28,7 @@ const StarWars = ({starWar}) => {
                 <p>Rating: {rating}</p>
                 <div className="card-actions">
                 <Link to={`/toysDetails/${number}`}>
-                    <button onClick={handleView} className="btn btn-primary">view details</button>
+                    <button onClick={handleView} className="font-semibold bg-slate-400 rounded p-2 hover:bg-slate-600">view details</button>
                     </Link>
                 </div>
             </div>

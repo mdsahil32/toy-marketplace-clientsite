@@ -1,12 +1,14 @@
 import Banner from '../Banner/Banner';
+import GallerySection from '../Components/GallerySection/GallerySection';
 import Category from '../SubCategory/Category';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Banner></Banner>
+            <GallerySection></GallerySection>
             <Category></Category>
-        </div>
+        </>
     );
 };
 

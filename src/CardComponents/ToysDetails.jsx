@@ -8,8 +8,7 @@ const ToysDetails = () => {
     const {id, name , number, picture, price, rating} = data;
     return (
         <>
-            {/* <Header></Header> */}
-
+            {/* sub-category toy details  */}
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img className='w-full h-96' src={picture} />
@@ -23,7 +22,6 @@ const ToysDetails = () => {
                 </div>
             </div>
 
-            {/* <Footer></Footer> */}
         </>
     );
 };

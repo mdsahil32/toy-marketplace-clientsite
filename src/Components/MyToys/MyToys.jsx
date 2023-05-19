@@ -24,7 +24,7 @@ const MyToys = () => {
         <h1 className='text-3xl font-semibold text-center my-3'>My Toys Are Here!!</h1>
       
         <div className="overflow-x-auto ">
-            <table className="table w-full ">
+            <table className="table w-full">
                 {/* head*/}
                 <thead>
                     <tr>
