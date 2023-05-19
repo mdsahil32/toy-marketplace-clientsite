@@ -28,7 +28,7 @@ const AddToys = () => {
             if (data.insertedId) {
                 Swal.fire(
                     'Good job!',
-                    'Add Toy Successfully',
+                    'Added Toy Successfully',
                     'success'
                   )
             }

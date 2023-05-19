@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Dcs = ({dc}) => {
+    const { user } = useContext(AuthContext)
     const {id, name , number, picture, price, rating} = dc;
+
+    const handleView =()=>{
+        if (!user) {
+            Swal.fire(
+                'login first!!',
+                '“You have to log in first to view details” ',
+                
+              )
+        }
+    }
+
     return (
         <div className="card w-full bg-base-100 shadow-xl border-4">
             <figure className="px-10 pt-10">
@@ -14,7 +28,7 @@ const Dcs = ({dc}) => {
                 <p>Rating: {rating}</p>
                 <div className="card-actions">
                 <Link to={`/toysDetails/${number}`}>
-                    <button  className="btn btn-primary">view details</button>
+                    <button onClick={handleView} className="btn btn-primary">view details</button>
                     </Link>
                 </div>
             </div>

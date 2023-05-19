@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Avengers from '../CardComponents/Avengers';
@@ -60,14 +60,14 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className='grid md:grid-cols-2 gap-12'>
-                    {
-                        starWars.map(starWar => <StarWars
-                            key={starWar.name}
-                            starWar={starWar}
-                        ></StarWars>)
-                    }
-                     </div>
+                    <div className='grid md:grid-cols-2 gap-12'>
+                        {
+                            starWars.map(starWar => <StarWars
+                                key={starWar.name}
+                                starWar={starWar}
+                            ></StarWars>)
+                        }
+                    </div>
                 </TabPanel>
             </Tabs>
 
