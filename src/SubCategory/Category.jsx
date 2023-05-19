@@ -29,7 +29,7 @@ const Category = () => {
     }, [])
 
     return (
-        <div className='mx-24 my-24'>
+        <div className='md:mx-24 my-24'>
             <h1 className='text-6xl font-semibold text-center '>ACTION HERO TOYS</h1>
             <Tabs>
                 <TabList>

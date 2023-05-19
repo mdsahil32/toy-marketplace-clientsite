@@ -34,12 +34,16 @@ const MyToys = () => {
                         <th>price</th>
                         <th>seller Name</th>
                         <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                     {
                         toys.map(toy => <MyToysTable
                         key={toy._id}
                         toy={toy}
+                        toys={toys}
+                        setToys={setToys}
                         ></MyToysTable>)
                     }
             </table>
