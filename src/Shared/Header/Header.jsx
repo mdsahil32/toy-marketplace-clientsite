@@ -30,6 +30,9 @@ const Header = () => {
                             <NavLink className='font-medium' >My Toys</NavLink>
                                 {user ? <>
                                     <button className='ml-4 font-medium' onClick={handleLogout}>Logout</button>
+                                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                    <img className="w-1/4 rounded-full" src={user?.photoURL} alt="" />
+                                </div>
                                 </>
                                     : <Link className='ml-4 font-medium' to='/login'>Login</Link>
                                 }
@@ -45,22 +48,21 @@ const Header = () => {
                 <div className="navbar-end">
                     <div className=" navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-5">
-                            <NavLink className='font-medium' to='/'>Home</NavLink>
-                            <NavLink to='allToys' className='font-medium' >All Toys</NavLink>
-                            <NavLink to='/blog' className='font-medium' >Blog</NavLink>
-                            <NavLink to='/addToys' className='font-medium' >Add Toys</NavLink>
-                            <NavLink to='/myToys' className='font-medium' >My Toys</NavLink>
-                           
+                            <NavLink className='font-medium mt-3' to='/'>Home</NavLink>
+                            <NavLink to='allToys' className='font-medium mt-3' >All Toys</NavLink>
+                            <NavLink to='/blog' className='font-medium mt-3' >Blog</NavLink>
+                            <NavLink to='/addToys' className='font-medium mt-3' >Add Toys</NavLink>
+                            <NavLink to='/myToys' className='font-medium mt-3' >My Toys</NavLink>
+
                             {user ? <>
-                                <button className='ml-4 font-medium' onClick={handleLogout}>Logout</button>
+                                <button className='md:ml-4 font-medium' onClick={handleLogout}>Logout</button>
+                                <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                    <img className="w-1/2 rounded-full" src={user?.photoURL} alt="" />
+                                </div>
                             </>
-                                : <Link className='ml-4 font-medium' to='/login'>Login</Link>
+                                : <Link className='ml-4 font-medium mt-3' to='/login'>Login</Link>
                             }
                         </ul>
-                    </div>
-
-                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                        <img className="ml-6 w-1/3 rounded-full" src={user?.photoURL} alt="" />
                     </div>
                 </div>
             </div>

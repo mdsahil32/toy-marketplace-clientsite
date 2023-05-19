@@ -1,6 +1,10 @@
 import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useContext } from "react";
 
 const AddToys = () => {
+    const {user } = useContext(AuthContext)
+    console.log(user);
     const handleSubmit = e =>{
         e.preventDefault()
         const form =e.target;
@@ -51,21 +55,21 @@ const AddToys = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text">Toy Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Name" className="input input-bordered " />
+                            <input  type="text" name="name" placeholder="Name" className="input input-bordered " />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">seller name</span>
                             </label>
-                            <input type="text" name="sellerName" placeholder="seller name" className="input input-bordered" />
+                            <input defaultValue={user?.displayName} type="text" name="sellerName" placeholder="seller name" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">seller email</span>
                             </label>
-                            <input type="email" name="sellerEmail" placeholder="seller email" className="input input-bordered" />
+                            <input defaultValue={user?.email} type="email" name="sellerEmail" placeholder="seller email" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
