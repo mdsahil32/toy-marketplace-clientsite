@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
     const { createUser }= useContext(AuthContext)
+    const [error, setError] = useState()
     const handleRegister = e => {
         e.preventDefault()
         const form = event.target;
@@ -18,9 +20,14 @@ const Register = () => {
         .then(result => {
             const logged = result.user
             console.log(logged);
+            Swal.fire(
+                'Good job!',
+                'Register Successfully',
+                'success'
+              )
         })
         .catch(error =>{
-            console.log(error);
+            setError(error.message);
         })
     }
 
@@ -62,6 +69,7 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>
+                        <p className="text-red-500">{error}</p>
                     </div>
                 </form>
             </div>

@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import googleImg from '../assets/google.png'
 
 const Login = () => {
     const navigate = useNavigate()
+    const [error, setError] = useState()
     const { signIn, signInWithGoogle } = useContext(AuthContext)
     const location = useLocation()
     const from = location.state?.from?.pathname ||  '/'
@@ -24,7 +25,7 @@ const Login = () => {
             navigate(from, {replace: true})
         })
         .catch(error => {
-            console.log(error);
+            setError(error.message);
         })
     }
     const handleGoogle = () =>{
@@ -65,9 +66,11 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
+                        <p className="text-red-500">{error}</p>
                     </div>
                     <img className="w-1/4 ms-8 pb-6 link" onClick={handleGoogle} src={googleImg} alt="" />
                 </form>
+                
             </div>
         </div>
     );
