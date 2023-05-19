@@ -33,7 +33,7 @@ const AllToys = () => {
                             <th>quantity</th>
                             <th>price</th>
                             <th>seller Name</th>
-                            <th></th>
+                            <th>See Details</th>
                         </tr>
                     </thead>
                     {
