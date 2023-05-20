@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const UpdateToy = () => {
     const toyData= useLoaderData()
     console.log('toy',toyData);
-    const { _id, sellerName, name, subCategory, quantity, price, } = toyData
+    const { _id } = toyData
 
     const handleUpdate = event =>{
         event.preventDefault()
@@ -17,7 +17,7 @@ const UpdateToy = () => {
         const detail = form.detail.value;
         const update = {price, quantity, detail}
         console.log(update); 
-        fetch(`http://localhost:5000/addToy/${_id}`,{
+        fetch(`https://hero-toys-server-site.vercel.app/addToy/${_id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'

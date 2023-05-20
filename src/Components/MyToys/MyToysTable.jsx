@@ -19,7 +19,7 @@ const MyToysTable = ({ toy , toys, setToys}) => {
           })
        .then((result) =>{
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/addToy/${_id}`,{
+            fetch(`https://hero-toys-server-site.vercel.app/addToy/${_id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())

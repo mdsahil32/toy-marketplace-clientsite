@@ -8,40 +8,42 @@ import img6 from '../../../public/img/superheroe-trying-fly.jpg'
 const GallerySection = () => {
     return (
         <div>
-            <h3 className='text-6xl font-semibold font-serif text-center mb-12 mt-24'>Our Best Quality Toy!!</h3>
-            <div className='grid grid-cols-2 md:grid-cols-3 md:mx-24 gap-3 '  >
+            <h3 className='text-5xl font-semibold font-serif text-center mb-12 mt-40'>Our Best Quality Toy!!</h3>
+            <div className='grid grid-cols-2 md:grid-cols-3 md:mx-36 gap-3'
+            >
                 {/* 1 */}
-                <div className="card w-full h-80 bg-base-100 shadow-xl">
-                    
-                    <figure><img className='w-80' src={img1} alt="Shoes" /></figure>
+                <div className="card w-full h-72 bg-base-100 shadow-xl hover:border-4 border-blue-950" >
+
+                    <figure><img className='w-80 h-72 hover:h-80' src={img1} alt="Shoes" /></figure>
                 </div>
                 {/* 2 */}
-                <div  className="card h-80  w-full bg-base-100 shadow-xl">
-                    
-                    <figure><img  className='w-80' src={img2} alt="Shoes" /></figure>
+                <div  className="card h-72  w-full bg-base-100 shadow-xl hover:border-4 border-blue-950">
+
+                    <figure><img  className='w-80 h-72 hover:h-80' src={img2} alt="Shoes" /></figure>
                 </div>
                 {/* 3 */}
-                <div className="card h-80  w-full bg-base-100 shadow-xl">
-                   
-                    <figure><img className='w-80'  src={img3} alt="Shoes" /></figure>
+                <div className="card h-72  w-full bg-base-100 shadow-xl hover:border-4 border-blue-950">
+
+                    <figure><img className='w-80 h-72 hover:h-80'  src={img3} alt="Shoes" /></figure>
                 </div>
                 {/* 4 */}
-                <div className="card h-80  w-full bg-base-100 shadow-xl">
-                    
-                    <figure><img className='w-80'  src={img4} alt="Shoes" /></figure>
+                <div className="card h-72  w-full bg-base-100 shadow-xl hover:border-4 border-blue-950">
+
+                    <figure><img className='w-80 h-72 hover:h-80'  src={img4} alt="Shoes" /></figure>
                 </div>
                 {/* 5 */}
-                <div className="card h-80  w-full bg-base-100 shadow-xl">
-                    
-                    <figure><img className='w-80'  src={img5} alt="Shoes" /></figure>
+                <div className="card h-72  w-full bg-base-100 shadow-xl hover:border-4 border-blue-950">
+
+                    <figure><img className='w-80 h-72 hover:h-80'  src={img5} alt="Shoes" /></figure>
                 </div>
                 {/* 6 */}
-                <div className="card h-80  w-full bg-base-100 shadow-xl">
-                    
-                    <figure><img className='w-80'  src={img6} alt="Shoes" /></figure>
+                <div className="card h-72  w-full bg-base-100 shadow-xl hover:border-4 border-blue-950">
+
+                    <figure><img className='w-80 h-72 hover:h-80'   src={img6} alt="Shoes" /></figure>
                 </div>
             </div>
         </div>
+        
     );
 };
 

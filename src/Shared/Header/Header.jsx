@@ -14,7 +14,7 @@ const Header = () => {
     }
 
     return (
-        <div className="md:mx-12">
+        <div className="md:mx-24">
             <div className="navbar bg-base-100 my-2">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -24,12 +24,12 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gray-600 rounded-box w-52 h-80 text-white">
                             <ul className="menu menu-vertical px-1  gap-5">
                                 <NavLink className='font-medium' to='/'>Home</NavLink>
-                                <NavLink className='font-medium' >All Toys</NavLink>
-                                <NavLink className='font-medium' >Blog</NavLink>
+                                <NavLink to='/allToys' className='font-medium' >All Toys</NavLink>
+                                <NavLink to='/blog' className='font-medium' >Blog</NavLink>
 
                                 {user ? <>
-                                    <NavLink className='font-medium' >Add Toys</NavLink>
-                                    <NavLink className='font-medium' >My Toys</NavLink>
+                                    <NavLink to='/addToys' className='font-medium' >Add Toys</NavLink>
+                                    <NavLink  to='/myToys'  className='font-medium' >My Toys</NavLink>
                                     <button className='ml-4 font-medium' onClick={handleLogout}>Logout</button>
                                     <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                                         <img className="w-1/4 rounded-full" src={user?.photoURL} alt="" />
@@ -50,7 +50,7 @@ const Header = () => {
                     <div className=" navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-5">
                             <NavLink className='font-medium mt-3' to='/'>Home</NavLink>
-                            <NavLink to='allToys' className='font-medium mt-3' >All Toys</NavLink>
+                            <NavLink to='/allToys' className='font-medium mt-3' >All Toys</NavLink>
                             <NavLink to='/blog' className='font-medium mt-3' >Blog</NavLink>
 
 

@@ -1,8 +1,6 @@
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useContext } from "react";
-import Footer from "../../Shared/Footer/Footer";
-import Header from "../../Shared/Header/Header";
 
 const AddToys = () => {
     const {user } = useContext(AuthContext)
@@ -21,7 +19,7 @@ const AddToys = () => {
         const detail = form.detail.value;
         const AddToy = {url, name, sellerEmail, sellerName, subCategory, price, rating, quantity, detail}
         // console.log(AddToy);
-        fetch('http://localhost:5000/addToy',{
+        fetch('https://hero-toys-server-site.vercel.app/addToy',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

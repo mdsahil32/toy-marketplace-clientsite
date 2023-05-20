@@ -9,7 +9,7 @@ const ToyDetail = () => {
     const { _id, sellerName, name, subCategory, quantity, price, url, rating, sellerEmail, detail } = singleToy
 
     return (
-        <>
+        <div>
             {/* single toy details */}
             <h1 className='text-5xl font-bold text-center'>Single Toy</h1>
             <div className="card lg:card-side bg-base-100 shadow-xl mx-12 my-4">
@@ -31,8 +31,8 @@ const ToyDetail = () => {
                 </div>
             </div>
             {/*  */}
-            <h1 className='text-3xl text-center font-semibold mt-14'>Check My Extra Toy</h1>
-            <div className='grid grid-cols-2 mx-24 gap-5 mt-8'>
+            <h1 className='text-3xl text-center font-semibold mt-32'>Check My Extra Toy</h1>
+            <div className='flex mx-24 gap-5 mt-8' data-aos="fade-up" data-aos-duration="2000">
                 <div className="card w-full border-2  bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="card-title">Gaulois</h2>
@@ -49,7 +49,7 @@ const ToyDetail = () => {
                     <figure><img className='h-80' src={img2} alt="Shoes" /></figure>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

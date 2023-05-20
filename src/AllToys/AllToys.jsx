@@ -8,7 +8,7 @@ const AllToys = () => {
     const [toy, setToy] = useState(toys)
    
     const handleSearch = () =>{
-        fetch(`http://localhost:5000/toySearchByName/${searchText}`)
+        fetch(`https://hero-toys-server-site.vercel.app/toySearchByName/${searchText}`)
         .then(res => res.json())
         .then(data => {
           setToy(data);

@@ -11,26 +11,26 @@ const Category = () => {
     const [starWars, setStarWars] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category/1`)
+        fetch(`https://hero-toys-server-site.vercel.app/category/1`)
             .then(res => res.json())
             .then(data => setAvengers(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category/2`)
+        fetch(`https://hero-toys-server-site.vercel.app/category/2`)
             .then(res => res.json())
             .then(data => setDcs(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category/3`)
+        fetch(`https://hero-toys-server-site.vercel.app/category/3`)
             .then(res => res.json())
             .then(data => setStarWars(data))
     }, [])
 
     return (
-        <div className='md:mx-24 my-24'>
-            <h1 className='text-6xl font-semibold text-center mb-12'>ACTION HERO TOYS</h1>
+        <div className='md:mx-24 mt-40'>
+            <h1 className='text-6xl font-semibold text-center mb-8 '>ACTION HERO TOYS</h1>
             <Tabs>
                 <TabList>
                     <p className='underline mb-4'>Sub-Category list Check it.</p>
@@ -40,7 +40,7 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='grid md:grid-cols-2 gap-12'>
+                    <div className='grid md:grid-cols-2 gap-12' >
                         {
                             avengers.map(avenger => <Avengers
                                 key={avenger.name}
