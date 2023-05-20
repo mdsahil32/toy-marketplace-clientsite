@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import Header from '../Shared/Header/Header';
-import Footer from '../Shared/Footer/Footer';
 
 const ToysDetails = () => {
     const data = useLoaderData()
