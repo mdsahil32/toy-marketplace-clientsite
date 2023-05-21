@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import logo from '../../../public/vite.png'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -41,7 +42,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="flex items-center gap-2">
-                        <img className="md:w-16 w-10 rounded-full" src='/public/vite.png' alt="" />
+                        <img className="md:w-16 w-10 rounded-full" src={logo} alt="" />
                         <h3 className="text-2xl md:font-semibold font-mono">KID HEROES</h3>
                     </div>
                 </div>
