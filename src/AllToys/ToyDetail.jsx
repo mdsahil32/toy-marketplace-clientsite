@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import img1 from '../../public/img/fun-gaulois-3d-illustration.jpg'
@@ -32,7 +31,7 @@ const ToyDetail = () => {
             </div>
             {/*  */}
             <h1 className='text-3xl text-center font-semibold mt-32'>Check My Extra Toy</h1>
-            <div className='flex mx-24 gap-5 mt-8' data-aos="fade-up" data-aos-duration="2000">
+            <div  className='flex mx-24 gap-5 mt-8' >
                 <div className="card w-full border-2  bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="card-title">Gaulois</h2>
