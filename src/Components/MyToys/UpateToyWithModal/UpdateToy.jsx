@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const UpdateToy = () => {
     const toyData= useLoaderData()
-    console.log('toy',toyData);
+    // console.log('toy',toyData);
     const { _id } = toyData
 
     const handleUpdate = event =>{

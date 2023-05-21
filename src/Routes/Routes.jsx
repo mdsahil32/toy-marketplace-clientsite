@@ -14,6 +14,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import AllToys from "../AllToys/AllToys";
 import ToyDetail from "../AllToys/ToyDetail";
 import UpdateToy from "../Components/MyToys/UpateToyWithModal/UpdateToy";
+import Blog from "../Components/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -57,10 +58,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><ToyDetail></ToyDetail></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://hero-toys-server-site.vercel.app/addToy/${params.id}`)
             },
-            
+
         ]
     },
-    
+
     {
         path: 'myToys',
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
         path: 'updateToy/:id',
         element: <UpdateToy></UpdateToy>,
         loader: ({ params }) => fetch(`https://hero-toys-server-site.vercel.app/addToy/${params.id}`)
+    }
+    , 
+    {
+        path: 'blog',
+        element: <Blog></Blog>
     }
 ]);
 
